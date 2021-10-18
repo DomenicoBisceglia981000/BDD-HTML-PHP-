@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<?php 
+//trasformare la pagina index.html in index.php
+//generare le opzioni del form dal seguente array:
+/*
+    $genre_list = array(
+        "C" => "Commedie",
+        "T" => "Thriller",
+        "H" => "Horror"
+    );
+*/
+?>
+
+<html>
+    <head>
+        <title>Film e pellicole per tipologia</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+    </head>
+    <body>
+        <div class="uk-container uk-padding">
+            <h2>MovieAPP - Pellicole disponibili</h2>
+            <form method="POST" action="movie.php">
+            <fieldset class="uk-fieldset">
+
+                <legend class="uk-legend">Seleziona la tipologia di pellicola alla quale sei interessato</legend>
+
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" placeholder="Inserisci il titolo di una pellicola" name="title">
+                </div>
+
+                <div class="uk-margin">
+                    <label class="uk-form-label" name="genre">Seleziona un genere:</label>
+                    <select class="uk-select">
+                        <option value="ND" selected>--</option>
+                        <option value="C" >Commedie</option>
+                        <option value="T" >Thriller</option>
+                        <option value="H" >Horror</option>
+                    </select>
+                </div>
+                <button class="uk-button uk-button-primary" type="submit">Cerca</button>
+            </fieldset>
+        </form>
+
+        </div>
+    </body>
+</html>
